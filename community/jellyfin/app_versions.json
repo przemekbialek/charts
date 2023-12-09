@@ -4,7 +4,7 @@
         "supported": false,
         "healthy_error": null,
         "location": "/__w/charts/charts/community/jellyfin/1.2.0",
-        "last_update": "2023-12-03 14:02:46",
+        "last_update": "2023-12-09 12:08:47",
         "required_features": [
             "definitions/gpuConfiguration",
             "normalize/acl",
@@ -201,6 +201,22 @@
                                 "schema": {
                                     "type": "boolean",
                                     "default": false
+                                }
+                            },
+                            {
+                                "variable": "jellyfinExpose",
+                                "label": "Expose jellyfin on Node IP",
+                                "description": "Expose service on node IP",
+                                "schema": {
+                                    "type": "boolean",
+                                    "default": true,
+                                    "show_if": [
+                                        [
+                                            "hostNetwork",
+                                            "=",
+                                            false
+                                        ]
+                                    ]
                                 }
                             },
                             {

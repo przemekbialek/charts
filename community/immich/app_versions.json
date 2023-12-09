@@ -4,11 +4,11 @@
         "supported": false,
         "healthy_error": null,
         "location": "/__w/charts/charts/community/immich/2.0.5",
-        "last_update": "2023-12-09 10:58:19",
+        "last_update": "2023-12-09 12:08:47",
         "required_features": [
-            "definitions/gpuConfiguration",
-            "normalize/acl",
             "definitions/timezone",
+            "normalize/acl",
+            "definitions/gpuConfiguration",
             "normalize/ixVolume"
         ],
         "human_version": "1.90.2_2.0.5",
@@ -177,6 +177,15 @@
                     "schema": {
                         "type": "dict",
                         "attrs": [
+                            {
+                                "variable": "immichExpose",
+                                "label": "Expose immich on node IP",
+                                "description": "Expose service on node IP.",
+                                "schema": {
+                                    "type": "boolean",
+                                    "default": true
+                                }
+                            },
                             {
                                 "variable": "webuiPort",
                                 "label": "Web Port",

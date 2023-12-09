@@ -6,8 +6,8 @@
         "location": "/__w/charts/charts/community/omada-controller/1.1.4",
         "last_update": "2023-12-05 02:17:30",
         "required_features": [
-            "definitions/certificate",
             "definitions/timezone",
+            "definitions/certificate",
             "normalize/ixVolume"
         ],
         "human_version": "5.13_1.1.4",

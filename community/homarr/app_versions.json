@@ -6,8 +6,8 @@
         "location": "/__w/charts/charts/community/homarr/2.0.0",
         "last_update": "2023-12-03 20:14:30",
         "required_features": [
-            "normalize/acl",
             "definitions/timezone",
+            "normalize/acl",
             "normalize/ixVolume"
         ],
         "human_version": "0.14.2_2.0.0",
