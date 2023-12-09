@@ -63,6 +63,12 @@ questions:
     schema:
       type: dict
       attrs:
+        - variable: immichExpose
+          label: Expose immich on node IP
+          description: Expose service on node IP.
+          schema:
+            type: boolean
+            default: true
         - variable: webuiPort
           label: Web Port
           description: The port for the Immich WebUI.

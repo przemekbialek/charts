@@ -47,14 +47,20 @@ service:
   jellyfin:
     enabled: true
     primary: true
+    {{- if .Values.jellyfinNetwork.jellyfinExpose }}
     type: NodePort
+    {{- else }}
+    type: ClusterIP
+    {{- end }}
     targetSelector: jellyfin
     ports:
       webui:
         enabled: true
         primary: true
         port: {{ .Values.jellyfinNetwork.webPort }}
+        {{- if .Values.jellyfinNetwork.jellyfinExpose }}
         nodePort: {{ .Values.jellyfinNetwork.webPort }}
+        {{- end }}
         targetPort: 8096
         targetSelector: jellyfin
 

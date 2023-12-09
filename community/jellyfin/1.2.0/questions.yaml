@@ -93,6 +93,13 @@ questions:
           schema:
             type: boolean
             default: false
+        - variable: jellyfinExpose
+          label: Expose jellyfin on Node IP
+          description: Expose service on node IP
+          schema:
+            type: boolean
+            default: true
+            show_if: [["hostNetwork", "=", false]]
         - variable: webPort
           label: Web Port
           description: The port for the Jellyfin Web UI.
